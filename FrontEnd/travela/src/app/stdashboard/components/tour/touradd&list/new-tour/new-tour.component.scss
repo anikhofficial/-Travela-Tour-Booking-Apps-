@@ -1,0 +1,44 @@
+.new-tour-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.new-tour-form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.new-tour-form-container form div {
+  margin-bottom: 15px;
+}
+
+.new-tour-form-container form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.new-tour-form-container form input,
+.new-tour-form-container form textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.new-tour-form-container form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.new-tour-form-container form button[disabled] {
+  background-color: #ccc;
+}

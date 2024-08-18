@@ -1,0 +1,62 @@
+.container-fluid.payment-done {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6d5dfc, #c183f7);
+  
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  
+    .card {
+      background-color: rgba(255, 255, 255, 0.9);
+      border: none;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+  
+    .section-payment-done-title {
+      color: #6d5dfc;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+  
+    h1 {
+      color: #28a745;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+  
+    h3 {
+      color: #28a745;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  
+    .lead {
+      color: #555;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+  
+    .btn-primary {
+      background-color: #6d5dfc;
+      border: none;
+      padding: 1rem 0;
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+  
+      &:hover {
+        background-color: #5b4fd8;
+        transform: scale(1.05);
+      }
+    }
+  }
+  

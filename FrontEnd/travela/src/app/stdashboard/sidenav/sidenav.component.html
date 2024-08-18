@@ -1,0 +1,112 @@
+<mat-nav-list>
+  <div class="logo py-4">
+    <img src="./assets/travela2.png" alt="Company Logo" />
+  </div>
+  <mat-divider></mat-divider>
+  <h2 matSubheader class="mt-2" style="color: aliceblue !important;padding-left: 10px; ">Travela</h2>
+ 
+  <div style="margin-bottom: 20px;">
+    <a class="custom-menu-item" (click)="toggleTourMenu()">
+      <mat-icon style="color: aliceblue !important;">account_circle</mat-icon> Tour Package
+    </a>
+
+    <div class="sub-menu-container" *ngIf="tourMenuOpen">
+      <a class="custom-sub-menu-item" routerLink="/dashboard/new-tour">
+        <mat-icon style="color: aliceblue !important;">add_circle</mat-icon> New Tour Package
+      </a>
+      <a class="custom-sub-menu-item" routerLink="/dashboard/tour-list">
+        <mat-icon style="color: aliceblue !important;">list</mat-icon> Tour Package List
+      </a>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 20px;">
+    <a class="custom-menu-item" (click)="toggleLocationMenu()">
+      <mat-icon style="color: aliceblue !important;">place</mat-icon> Location
+    </a>
+
+    <div class="sub-menu-container" *ngIf="locationMenuOpen">
+      <a class="custom-sub-menu-item" routerLink="/dashboard/new-location">
+        <mat-icon style="color: aliceblue !important;">add_location</mat-icon> New Location
+      </a>
+      <a class="custom-sub-menu-item" routerLink="/dashboard/location-list">
+        <mat-icon style="color: aliceblue !important;">list</mat-icon> Location List
+      </a>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 20px;">
+    <a class="custom-menu-item" (click)="toggleItineraryMenu()">
+      <mat-icon style="color: aliceblue !important;">calendar_view_day</mat-icon> Schedule
+    </a>
+
+    <div class="sub-menu-container" *ngIf="itineraryMenuOpen">
+      <a class="custom-sub-menu-item" routerLink="/dashboard/new-schedule">
+        <mat-icon style="color: aliceblue !important;">add_circle</mat-icon> New Schedule
+      </a>
+      <a class="custom-sub-menu-item" routerLink="/dashboard/schedule-list">
+        <mat-icon style="color: aliceblue !important;">list</mat-icon> Schedule List
+      </a>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 20px;">
+  <a class="custom-menu-item" (click)="toggleTransportMenu()">
+    <mat-icon style="color: aliceblue !important;">directions_car</mat-icon> Transport
+  </a>
+
+  <div class="sub-menu-container" *ngIf="transportMenuOpen">
+    <a class="custom-sub-menu-item" routerLink="/dashboard/new-transport">
+      <mat-icon style="color: aliceblue !important;">add_circle</mat-icon> New Transport
+    </a>
+    <a class="custom-sub-menu-item" routerLink="/dashboard/transport-list">
+      <mat-icon style="color: aliceblue !important;">list</mat-icon> Transport List
+    </a>
+  </div>
+</div>
+<div style="margin-bottom: 20px;">
+  <!-- Main menu item for User Details -->
+  <a class="custom-menu-item" (click)="toggleUserDetailsMenu()">
+    <mat-icon style="color: aliceblue !important;">person</mat-icon> User Details
+  </a>
+
+  <!-- Sub-menu container with ngIf directive to toggle visibility -->
+  <div class="sub-menu-container" *ngIf="userDetailsMenuOpen">
+    <!-- Sub-menu item for Payment Details -->
+    <a class="custom-sub-menu-item" routerLink="/dashboard/payment-list">
+      <mat-icon style="color: aliceblue !important;">payment</mat-icon> Payment Details
+    </a>
+
+    <!-- Sub-menu item for Booking Details -->
+    <a class="custom-sub-menu-item" routerLink="/dashboard/booking-data">
+      <mat-icon style="color: aliceblue !important;">book</mat-icon> Booking Details
+    </a>
+  </div>
+</div>
+
+
+
+  <!-- Existing code... -->
+
+  <div style="margin-bottom: 20px;">
+    <a class="custom-menu-item" (click)="toggleBookingManagementMenu()">
+      <mat-icon style="color: aliceblue !important;">manage_accounts</mat-icon>Management
+    </a>
+
+    <div class="sub-menu-container" *ngIf="bookingManagementMenuOpen">
+      <a class="custom-sub-menu-item" routerLink="/dashboard/booking-mgt">
+        <mat-icon style="color: aliceblue !important;">list</mat-icon>Booking Mgt
+      </a>
+    </div>
+  </div>
+
+  <!-- Existing code... -->
+
+  <div style="margin-bottom: 20px;">
+    <a routerLink="" style="color: azure; padding-left: 20px;text-decoration: none;">
+      <mat-icon style="color: aliceblue !important ">exit_to_app</mat-icon>Logout
+    </a>
+  </div>
+
+
+</mat-nav-list>

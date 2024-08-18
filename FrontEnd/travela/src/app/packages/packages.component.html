@@ -1,0 +1,46 @@
+<app-header></app-header>
+
+<div>
+    <h1>Welcome to Our Tour Packages</h1>
+    <div class="packages">
+        <div class="package" *ngFor="let tours of tours">
+            <img src="./assets/img/packages-1.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+            <!-- <img src="{{tours.photo}}" class="img-fluid w-100 rounded-top" alt="Image"> -->
+            <h2>{{tours.title}}</h2>
+            <p>{{tours.description}}</p>
+            <p>Days: {{tours.days}}</p>
+            <p>Price: {{tours.price}} Taka</p>
+
+        </div>
+    </div>
+    <app-footer></app-footer>
+
+
+
+
+
+
+
+    <!-- <h1>Welcome to Our Tour Packages</h1>
+<div class="packages">
+    <div class="package">
+        <img src="./assets/img/packages-1.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+        <h2><a href="beach_getaway.html">Beach Getaway</a></h2>
+        <p>Relax and unwind on the pristine beaches of our coastal destination. Package includes accommodation, meals, and guided tours.</p>
+        <p>Price: $500 per person</p>
+    </div>
+    
+    <div class="package">
+        <img src="./assets/img/packages-2.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+        <h2><a href="mountain_adventure.html">Mountain Adventure</a></h2>
+        <p>Embark on an exhilarating mountain adventure with hiking, camping, and wildlife spotting. Package includes accommodation, meals, and expert guides.</p>
+        <p>Price: $700 per person</p>
+    </div>
+    
+    <div class="package">
+        <img src="./assets/img/packages-4.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+        <h2><a href="city_explorer.html">City Explorer</a></h2>
+        <p>Discover the vibrant culture and history of our city destination. Package includes accommodation, city tours, and cultural experiences.</p>
+        <p>Price: $400 per person</p>
+    </div>
+</div> -->

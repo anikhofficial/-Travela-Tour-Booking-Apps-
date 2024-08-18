@@ -1,0 +1,37 @@
+<div class="new-tour-form-container">
+  <h2>Create New Tour</h2>
+  <form [formGroup]="newTourForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="tourId">Tour ID</label>
+      <input id="tourId" formControlName="id" required />
+    </div>
+    <div>
+      <label for="tourTitle">Tour Title</label>
+      <input id="tourTitle" formControlName="title" required />
+    </div>
+    <div>
+      <label for="tourDescription">Description</label>
+      <textarea id="tourDescription" formControlName="description" required></textarea>
+    </div>
+    <div>
+      <label for="tourPrice">Price</label>
+      <input id="tourPrice" type="number" formControlName="price" required />
+    </div>
+    <div>
+      <label for="tourPrice">Days</label>
+      <input id="tourPrice" type="text" formControlName="days" required />
+    </div>
+    <!-- <div class="d-flex justify-content-between align-items-start mb-3">
+      <div class="form-group photo-container text-center col-md-1 ">
+        <label for="photo">Photo</label>
+        <input type="file" id="photo" (change)="onFileChange($event)" class="form-control mb-2">
+        <div *ngIf="photoError" class="text-danger">
+          Photo is required.
+        </div>
+        <img *ngIf="photoPreview" [src]="photoPreview" alt="Photo Preview" class="img-fluid">
+      </div>
+    </div> -->
+
+    <button type="submit" [disabled]="!newTourForm.valid">Create Tour</button>
+  </form>
+</div>

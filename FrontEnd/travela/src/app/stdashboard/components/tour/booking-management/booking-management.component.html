@@ -1,0 +1,26 @@
+<table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Tour Package</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let booking of bookings">
+        <td>{{ booking.name }}</td>
+        <td>{{ booking.email }}</td>
+        <td>{{ booking.phone }}</td>
+        <td>{{ booking.tourPackage }}</td>
+        <td>{{ booking.status }}</td>
+        <td>
+          <button *ngIf="booking.status=='Pending'" type="submit" (click)="updateStatus(booking, 'Complete')">Complete</button>
+          <button *ngIf="booking.status=='Pending'" type="submit" (click)="updateStatus(booking, 'Cancel')">Cancel</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  

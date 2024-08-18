@@ -1,0 +1,27 @@
+.location-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .location-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .location-item:last-child {
+    border-bottom: none;
+  }
+  
+  .location-info h3 {
+    margin: 0 0 10px;
+  }
+  
+  .location-info p {
+    margin: 5px 0;
+  }
+  

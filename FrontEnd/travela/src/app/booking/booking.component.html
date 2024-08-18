@@ -1,0 +1,117 @@
+<app-header></app-header>
+<!-- Tour Booking Start -->
+<div class="container-fluid booking py-5">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <h5 class="section-booking-title pe-3">Booking</h5>
+                <h1 class="text-white mb-4">Online Booking</h1>
+                <p class="text-white mb-4">Welcome to the Travela Online Booking page – your one-stop destination for
+                    planning and booking unforgettable travel experiences. At Travela, we make it easy to explore, book,
+                    and enjoy your dream trips, all from the comfort of your home.
+
+                    Seamless Online Booking
+                    Easy-to-Use Platform
+                    Our user-friendly website allows you to browse, select, and book tours with ease. Whether you're
+                    planning a weekend getaway or an extended vacation, our platform is designed to make your booking
+                    process smooth and hassle-free.
+                    <a href="#" class="btn btn-light text-primary rounded-pill py-3 px-5 mt-2">Read More</a>
+            </div>
+            <div class="col-lg-6">
+                <h1 class="text-white mb-3">Book A Tour Deals</h1>
+                <p class="text-white mb-4">Get <span class="text-warning">50% Off</span> On Your First Adventure Trip
+                    With Travela. Get More Deal Offers Here.</p>
+                <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input formControlName="name" type="text" class="form-control bg-white border-0"
+                                    id="name" placeholder="Your Name">
+                                <label for="name">Your Name</label>
+                                <div *ngIf="bookingForm.get('name')?.invalid && (bookingForm.get('name')?.dirty || bookingForm.get('name')?.touched)"
+                                    class="text-danger">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input formControlName="email" type="email" class="form-control bg-white border-0"
+                                    id="email" placeholder="Your Email">
+                                <label for="email">Your Email</label>
+                                <div *ngIf="bookingForm.get('email')?.invalid && (bookingForm.get('email')?.dirty || bookingForm.get('email')?.touched)"
+                                    class="text-danger">
+                                    Please enter a valid email address.
+                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input formControlName="phone" type="number" class="form-control bg-white border-0"
+                                    id="phone" placeholder="Your Contact Number">
+                                <label for="phone">Mobile Number</label>
+                                <div *ngIf="bookingForm.get('phone')?.invalid && (bookingForm.get('phone')?.dirty || bookingForm.get('phone')?.touched)"
+                                    class="text-danger">
+                                    Phone number is required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input formControlName="bookingDate" type="date"
+                                    class="form-control bg-white border-0" id="bookingDate" placeholder="Date">
+                                <label for="bookingDate">Date</label>
+                                <div *ngIf="bookingForm.get('bookingDate')?.invalid && (bookingForm.get('bookingDate')?.dirty || bookingForm.get('bookingDate')?.touched)"
+                                    class="text-danger">
+                                    Date is required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <select formControlName="tourPackage" class="form-select bg-white border-0" id="tourPackage">
+                                    <option value="">Select Tour Package</option>
+                                    <option *ngFor="let tour of tours" [value]="tour.title">{{ tour.title }}</option>
+                                </select>
+                                <label for="tourPackage">Tour Package</label>
+                                <div *ngIf="bookingForm.get('tourPackage')?.invalid && (bookingForm.get('tourPackage')?.dirty || bookingForm.get('tourPackage')?.touched)"
+                                    class="text-danger">
+                                    Tour package selection is required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input formControlName="price" type="text" class="form-control bg-white border-0"
+                                    id="price" placeholder="Price">
+                                <label for="price">Price</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input formControlName="persons" type="text" class="form-control bg-white border-0"
+                                    id="persons" placeholder="Persons">
+                                <label for="persons">Persons</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <textarea formControlName="specialRequest" class="form-control bg-white border-0"
+                                    placeholder="Special Request" id="specialRequest" style="height: 100px"></textarea>
+                                <label for="specialRequest">Special Request</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" [disabled]="bookingForm.invalid"
+                                class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4" >Book Now</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Tour Booking End -->
+<app-footer></app-footer>

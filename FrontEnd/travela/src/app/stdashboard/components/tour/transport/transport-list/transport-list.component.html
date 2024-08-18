@@ -1,0 +1,14 @@
+<div class="transport-list">
+    <h2>Transport List</h2>
+    <div *ngIf="transports.length === 0">
+      <p>No transports available.</p>
+    </div>
+    <div class="transport-item" *ngFor="let transport of transports">
+      <div class="transport-info">
+        <h3>{{ transport.type }}</h3>
+        <p><strong>ID:</strong> {{ transport.id }}</p>
+        <p><strong>Description:</strong> {{ transport.description }}</p>
+      </div>
+    </div>
+  </div>
+  

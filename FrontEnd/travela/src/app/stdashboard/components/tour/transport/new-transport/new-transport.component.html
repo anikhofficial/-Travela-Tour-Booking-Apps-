@@ -1,0 +1,19 @@
+<div class="new-transport-form-container">
+    <h2>Create New Transport</h2>
+    <form [formGroup]="newTransportForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="transportId">Transport ID</label>
+        <input id="transportId" formControlName="id" required />
+      </div>
+      <div>
+        <label for="transportType">Type</label>
+        <input id="transportType" formControlName="type" required />
+      </div>
+      <div>
+        <label for="transportDescription">Description</label>
+        <textarea id="transportDescription" formControlName="description" required></textarea>
+      </div>
+      <button type="submit" [disabled]="!newTransportForm.valid">Create Transport</button>
+    </form>
+  </div>
+  

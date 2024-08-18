@@ -1,0 +1,64 @@
+// Styles for the login form
+.card {
+    max-width: 500px; // Adjust based on your design requirements
+    margin: 0 auto; // Center the card horizontally
+    padding: 20px;
+    
+    .card-body {
+      .card-title {
+        font-size: 1.5rem; // Larger font size for the title
+      }
+  
+      .row {
+        .col-md-6 {
+          // Styles specific to the form container
+          margin-top: 20px; // Add spacing above the form
+          background-color: #f7f7f7; // Light background color
+          border-radius: 5px; // Rounded corners
+  
+          form {
+            padding: 20px;
+  
+            .form-group {
+              margin-bottom: 20px;
+  
+              label {
+                font-weight: bold;
+              }
+  
+              input {
+                width: 100%;
+                padding: 10px;
+                font-size: 1rem;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+  
+                &:focus {
+                  border-color: #007bff; // Change border color on focus
+                }
+              }
+  
+              .alert {
+                margin-top: 5px; // Spacing above the error message
+              }
+            }
+  
+            button {
+              width: 100%;
+            }
+  
+            span {
+              display: block;
+              margin-top: 10px;
+              text-align: center;
+  
+              a {
+                color: #007bff; // Link color
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  

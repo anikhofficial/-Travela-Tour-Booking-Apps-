@@ -1,0 +1,14 @@
+<div class="schedule-list">
+    <h2>Schedule List</h2>
+    <div *ngIf="schedules.length === 0">
+      <p>No schedules available.</p>
+    </div>
+    <div class="schedule-item" *ngFor="let schedule of schedules">
+      <div class="schedule-info">
+        <h3>{{ schedule.activity }}</h3>
+        <p><strong>ID:</strong> {{ schedule.id }}</p>
+        <p><strong>Date:</strong> {{ schedule.activityDate | date }}</p>
+      </div>
+    </div>
+  </div>
+  

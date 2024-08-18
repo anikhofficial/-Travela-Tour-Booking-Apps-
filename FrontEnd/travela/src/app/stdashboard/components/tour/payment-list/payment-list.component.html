@@ -1,0 +1,25 @@
+
+
+<table>
+    <thead>
+        <tr>
+            <th>User Name</th>
+            <th>Email</th>
+            <th>Amount</th>
+            <th>Payment Method</th>
+            <th>Payment Number</th>
+            <th>Transaction Id</th>
+            <!-- <th>Action</th> -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let Payment of payments">
+            <td>{{ Payment.name }}</td>
+            <td>{{ Payment.email }}</td>
+            <td>{{ Payment.amount }}</td>
+            <td>{{ Payment.paymentMethod }}</td>
+            <td>{{ Payment.paymentNumber }}</td>
+            <td>{{ Payment.transactionId }}</td>
+        </tr>
+    </tbody>
+</table>

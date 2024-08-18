@@ -1,0 +1,13 @@
+<div class="location-list">
+  <h2>Location List</h2>
+  <div *ngIf="locations.length === 0">
+    <p>No locations available.</p>
+  </div>
+  <div class="location-item" *ngFor="let location of locations">
+    <div class="location-info">
+      <h3>{{ location.name }}</h3>
+      <p><strong>ID:</strong> {{ location.id }}</p>
+      <p><strong>Description:</strong> {{ location.description }}</p>
+    </div>
+  </div>
+</div>

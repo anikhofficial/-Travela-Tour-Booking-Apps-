@@ -1,0 +1,18 @@
+<div class="new-location-form-container">
+  <h2>Create New Location</h2>
+  <form [formGroup]="newLocationForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="locationId">Location ID</label>
+      <input id="locationId" formControlName="id" required />
+    </div>
+    <div>
+      <label for="locationName">Location Name</label>
+      <input id="locationName" formControlName="name" required />
+    </div>
+    <div>
+      <label for="locationDescription">Description</label>
+      <textarea id="locationDescription" formControlName="description" required></textarea>
+    </div>
+    <button type="submit" [disabled]="!newLocationForm.valid">Create Location</button>
+  </form>
+</div>

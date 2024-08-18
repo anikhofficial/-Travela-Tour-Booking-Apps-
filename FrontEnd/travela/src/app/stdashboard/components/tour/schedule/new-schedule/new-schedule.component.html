@@ -1,0 +1,18 @@
+<div class="new-schedule-form-container">
+  <h2>Create New Schedule</h2>
+  <form [formGroup]="newScheduleForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="scheduleId">Schedule ID</label>
+      <input id="scheduleId" formControlName="id" required />
+    </div>
+    <div>
+      <label for="scheduleActivity">Activity</label>
+      <input id="scheduleActivity" formControlName="activity" required />
+    </div>
+    <div>
+      <label for="scheduleActivityDate">Activity Date</label>
+      <input id="scheduleActivityDate" type="date" formControlName="activityDate" required />
+    </div>
+    <button type="submit" [disabled]="!newScheduleForm.valid">Create Schedule</button>
+  </form>
+</div>

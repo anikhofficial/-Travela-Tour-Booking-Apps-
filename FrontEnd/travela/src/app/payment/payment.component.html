@@ -1,0 +1,82 @@
+<div class="container-fluid payment py-5">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center justify-content-center">
+            <div class="col-lg-6">
+                <h5 class="section-payment-title pe-3">Payment Now</h5>
+                <h1 class="text-white mb-4">Make a Payment</h1>
+                <p class="lead mb-4">Merchant Bkash,Nagad & Rocket Number: 01700000000</p>
+
+                <form [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control bg-white border-0" id="name" formControlName="name" placeholder="Your Name">
+                                <label for="name">Your Name</label>
+                                <div *ngIf="paymentForm.get('name')?.invalid && paymentForm.get('name')?.touched" class="text-danger">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="email" class="form-control bg-white border-0" id="email" formControlName="email" placeholder="Your Email">
+                                <label for="email">Your Email</label>
+                                <div *ngIf="paymentForm.get('email')?.invalid && paymentForm.get('email')?.touched" class="text-danger">
+                                    Please enter a valid email.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="number" class="form-control bg-white border-0" id="paymentNumber" formControlName="paymentNumber" placeholder="Payment Number">
+                                <label for="paymentNumber">Payment Number</label>
+                                <div *ngIf="paymentForm.get('paymentNumber')?.invalid && paymentForm.get('paymentNumber')?.touched" class="text-danger">
+                                    Payment number is required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <select class="form-select bg-white border-0" id="paymentMethod" formControlName="paymentMethod">
+                                    <option value="">Select Payment</option>
+                                    <option value="bkash">Bkash</option>
+                                    <option value="nagad">Nagad</option>
+                                    <option value="rocket">Rocket</option>
+                                </select>
+                                <label for="paymentMethod">Payment Method</label>
+                                <div *ngIf="paymentForm.get('paymentMethod')?.invalid && paymentForm.get('paymentMethod')?.touched" class="text-danger">
+                                    Payment method is required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control bg-white border-0" id="amount" formControlName="amount" placeholder="Amount">
+                                <label for="amount">Amount</label>
+                                <div *ngIf="paymentForm.get('amount')?.invalid && paymentForm.get('amount')?.touched" class="text-danger">
+                                    Amount is required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control bg-white border-0" id="transactionId" formControlName="transactionId" placeholder="Transaction ID">
+                                <label for="transactionId">Transaction ID</label>
+                                <div *ngIf="paymentForm.get('transactionId')?.invalid && paymentForm.get('transactionId')?.touched" class="text-danger">
+                                    Transaction ID is required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary text-white w-100 py-3" type="submit" [disabled]="paymentForm.invalid">Submit Payment</button>
+                        </div>
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

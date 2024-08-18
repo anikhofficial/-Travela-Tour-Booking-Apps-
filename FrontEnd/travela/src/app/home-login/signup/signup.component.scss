@@ -1,0 +1,69 @@
+// General styles for the card and form
+.card {
+    max-width: 500px; // Adjust based on your design requirements
+    margin: 20px auto; // Center the card horizontally with some margin
+  
+    .card-body {
+      padding: 20px;
+  
+      .card-title {
+        font-size: 1.5rem; // Larger font size for the title
+        text-align: center; // Center-align the title
+        margin-bottom: 20px; // Add spacing below the title
+      }
+  
+      .row {
+        .col-md-6 {
+          margin: 0 auto; // Center the form within the column
+          background-color: #f7f7f7; // Light background color
+          padding: 20px;
+          border-radius: 5px; // Rounded corners
+  
+          form {
+            .form-group {
+              margin-bottom: 20px;
+  
+              label {
+                font-weight: bold;
+              }
+  
+              input[type="text"],
+              input[type="email"],
+              input[type="password"] {
+                width: 100%; // Full width for inputs
+                padding: 10px; // Padding for inputs
+                font-size: 1rem; // Font size for inputs
+                border: 1px solid #ccc; // Default border style
+                border-radius: 4px; // Rounded corners for inputs
+  
+                &:focus {
+                  border-color: #007bff; // Change border color on focus
+                }
+              }
+  
+              .text-danger {
+                margin-top: 5px; // Spacing above the error message
+                color: #dc3545; // Red color for error messages
+                font-size: 0.875rem; // Smaller font size for error messages
+              }
+            }
+  
+            button[type="submit"] {
+              width: 100%; // Full width for the submit button
+            }
+  
+            span {
+              display: block; // Make the span a block element
+              margin-top: 10px; // Spacing above the "Already have an account?" message
+              text-align: center; // Center-align the message
+  
+              a {
+                color: #007bff; // Blue color for the link
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
